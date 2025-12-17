@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,10 +27,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen  bg-center bg-cover bg-no-repeat overflow-x-hidden bg-black
+        `}
       >
+        <Navbar />
         {children}
+        <Footer title="   Examen   " date="   2025   ">  Tous droits réservés. </Footer>
       </body>
     </html>
   );
 }
+
+{/*
+   style={{
+          backgroundImage: "linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url('https://th.bing.com/th/id/OIP.lPoLoNAsoxeT6lkEwuszAwHaNK?&rs=1&pid=ImgDetMain&o=7&rm=3')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat"
+        }}>
+  */}
