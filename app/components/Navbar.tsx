@@ -20,16 +20,13 @@ export default function Navbar() {
 
                     {/* Logo */}
                     <Link href="/" className="text-xl font-bold text-white ">
-                        MyWebsite
+                        Examen-web
                     </Link>
 
                     {/* Desktop menu */}
                     <div className="hidden md:flex space-x-6 text-white " >
                         <Link href="/" className="block hover:text-orange-500">Accueil</Link>
-                        <Link href="/cv" className="block hover:text-orange-500">CV</Link>
-                        <Link href="/contact" className="block hover:text-orange-500">Contact</Link>
-                        <Link href="/blog" className="block hover:text-orange-500">Blog</Link>
-                        <Link href="/tasks" className="block hover:text-orange-500">Tasks</Link>
+                        <Link href="/booking" className="block hover:text-orange-500">booking</Link>
                     </div>
 
                     {/* Hamburger */}
@@ -53,27 +50,13 @@ export default function Navbar() {
                         Accueil
                     </Link>
                     <Link
-                        href="/about"
+                        href="/booking"
                         className="block px-4 py-2 hover:bg-orange-500 text-white"
                         onClick={() => setOpen(false)}
                     >
-                        CV
-                    </Link>
-                    <Link
-                        href="/contact"
-                        className="block px-4 py-2 hover:bg-orange-500 text-white"
-                        onClick={() => setOpen(false)}
-                    >
-                        Contact
+                        booking
                     </Link>
 
-                    <Link
-                        href="/blog"
-                        className="block px-4 py-2 hover:bg-orange-500 text-white"
-                        onClick={() => setOpen(false)}
-                    >
-                        Blog
-                    </Link>
                 </div>
             )}
         </nav>

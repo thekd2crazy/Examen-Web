@@ -1,10 +1,12 @@
+
 import { pgTable, text, serial, timestamp, boolean } from 'drizzle-orm/pg-core'
 
-export const articlesTable = pgTable('articles', {
+export const reservationsTable = pgTable('reservations', {
   id: serial().primaryKey(),
-  publishedAt: timestamp().defaultNow(),
-  title: text().notNull(),
-  content: text().notNull(),
-  author: text().notNull(),
-  post: boolean().default(false).notNull()
+  reserdedAt: timestamp().defaultNow(),
+  name_reservation: text().notNull(),
+  phone_number: text().notNull(),
+  countpeople: text().notNull(),
+  date : text().notNull(),
+  reserved: boolean().default(false).notNull()
 })
